@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML And CSS Tag Lab</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<div id="title">Transition CSS</div>
+<div id="button_image"><img src="/images/Spring-Lamb.-Image-shot-2-011.png"></div>
+<div id="button_text"><a href="/frontpage.html">Back To Main Page</a></div>
+
+<style>
+    #button_text {
+        -webkit-transition: -webkit-transform 2s; /* For Safari 3.1 to 6.0 */
+        transition: transform 2s;
+    }
+
+    #button_text:hover {
+        -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+        transform: rotate(360deg);
+    }
+    #button_image {
+        -webkit-transition: -webkit-transform 2s; /* For Safari 3.1 to 6.0 */
+        transition: transform 2s;
+    }
+
+    #button_image:hover {
+        -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+        transform: rotate(360deg);
+    }
+
+    @-webkit-keyframes myfirst {
+        from {left: 100px; top: 1000px;}
+        to {left: 1000px; top: 1000px;}
+    }
+
+    /* Standard syntax */
+    @keyframes myfirst {
+        0%   {background: red;}
+        25%  {background: yellow;}
+        50%  {background: blue;}
+        100% {background: green;}
+    }
+</style>
+</body>
+</html>

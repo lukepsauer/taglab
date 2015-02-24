@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CanvasTag</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<div id="title">Canvas Tag</div>
+<div class="paragraph"><canvas id="myCanvas" width="720" height="720"></canvas></div>
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var grd = ctx.createLinearGradient(0,0,720,0);
+    grd.addColorStop(0,"blue");
+    grd.addColorStop(1,"cyan");
+    ctx.fillStyle = grd;
+    ctx.fillRect(10,10,720,720);
+    var c = document.getElementById("myCanvas");
+    var ctx1 = c.getContext("2d");
+    var grd1 = ctx.createRadialGradient(75,50,5,90,60,720);
+    grd1.addColorStop(0,"orange");
+    grd1.addColorStop(1,"violet");
+    ctx1.arc(360, 360, 180, 0, 2*Math.PI);
+    ctx1.fillStyle = grd1;
+    ctx1.fill();
+    var c = document.getElementById("myCanvas");
+    var ctx2 = c.getContext("2d");
+    ctx2.font = "30px Arial";
+    ctx2.color = "white";
+    var gradient=ctx.createLinearGradient(0,0,c.width/1.5,0);
+    gradient.addColorStop("0.3","white");
+    gradient.addColorStop("0.5","black");
+    gradient.addColorStop("0.7","white");
+    ctx.fillStyle=gradient;
+    ctx2.fillText("THIS IS AMAZING!",227,362);
+</script>
+<span class="paragraph"><a href="/frontpage.html" class="paragraph">Back To Main Page</a></span>
+</body>
+</html>
